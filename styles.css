@@ -301,6 +301,137 @@ button.danger {
   margin-top: 18px;
 }
 
+.product-grid,
+.bonus-grid,
+.tier-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.product-card,
+.bonus-card,
+.tier-card {
+  display: grid;
+  gap: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px;
+  background: rgba(255, 209, 47, 0.05);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.product-card:hover,
+.bonus-card:hover,
+.tier-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 209, 47, 0.58);
+  background: rgba(255, 209, 47, 0.08);
+}
+
+.product-card header,
+.bonus-card header,
+.tier-card header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.product-card h4,
+.bonus-card h4,
+.tier-card h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.product-card p,
+.bonus-card p,
+.tier-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  border: 1px solid rgba(255, 209, 47, 0.35);
+  border-radius: 999px;
+  padding: 0 10px;
+  color: var(--yellow);
+  font-size: 0.78rem;
+  font-weight: 900;
+  white-space: nowrap;
+  background: rgba(255, 209, 47, 0.08);
+}
+
+.price-line {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.price-line strong {
+  color: var(--yellow);
+  font-size: 1.35rem;
+}
+
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.metric-mini {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.metric-mini strong {
+  display: block;
+  color: var(--yellow);
+}
+
+.metric-mini span {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.ranking-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.ranking-list li {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px;
+  background: rgba(255, 209, 47, 0.05);
+}
+
+.ranking-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.ranking-row strong {
+  display: block;
+}
+
+.ranking-row span {
+  color: var(--muted);
+}
+
 .tool-panel {
   min-height: 420px;
   border: 1px solid var(--line);
@@ -597,7 +728,10 @@ textarea {
   .hero-panel,
   .dashboard,
   .workspace-grid,
-  .split-view {
+  .split-view,
+  .product-grid,
+  .bonus-grid,
+  .tier-list {
     grid-template-columns: 1fr;
   }
 }
