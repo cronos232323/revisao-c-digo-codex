@@ -705,7 +705,7 @@ textarea {
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 760px) {
   .app-shell {
     grid-template-columns: 1fr;
   }
