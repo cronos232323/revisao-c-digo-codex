@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Codex em Acao - Demo Local</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Demonstração local, aplicada e rodando</p>
+        <h1>Codex em ação</h1>
+      </div>
+      <div class="status-pill">
+        <span class="pulse"></span>
+        Online no seu computador
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="hero-panel">
+        <div class="hero-copy">
+          <h2>Um painel interativo do que eu posso fazer por você</h2>
+          <p>
+            Esta demo mostra, em uma única tela, exemplos práticos: planejar trabalho,
+            gerar texto, revisar código, organizar tarefas e simular automações.
+          </p>
+          <div class="hero-actions">
+            <button id="runAll" class="primary">Executar demonstração</button>
+            <button id="resetDemo" class="ghost">Reiniciar</button>
+          </div>
+        </div>
+        <div class="signal-board" aria-label="Indicadores da demonstração">
+          <div>
+            <strong id="tasksCount">8</strong>
+            <span>tarefas mapeadas</span>
+          </div>
+          <div>
+            <strong id="confidenceCount">94%</strong>
+            <span>clareza do plano</span>
+          </div>
+          <div>
+            <strong id="timeCount">18 min</strong>
+            <span>economia simulada</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="workspace-grid">
+        <article class="tool-panel planner">
+          <div class="panel-head">
+            <span class="icon">01</span>
+            <div>
+              <h3>Planejamento de execução</h3>
+              <p>Transforma uma ideia aberta em passos acionáveis.</p>
+            </div>
+          </div>
+          <label for="goalInput">Objetivo</label>
+          <textarea id="goalInput" rows="4">Criar uma página de vendas simples para um produto digital, com visual profissional e chamada para ação.</textarea>
+          <button id="makePlan">Gerar plano aplicado</button>
+          <ol id="planOutput" class="result-list"></ol>
+        </article>
+
+        <article class="tool-panel writer">
+          <div class="panel-head">
+            <span class="icon">02</span>
+            <div>
+              <h3>Redação e adaptação</h3>
+              <p>Gera uma resposta pronta no tom que você escolher.</p>
+            </div>
+          </div>
+          <div class="inline-controls">
+            <label>
+              Tom
+              <select id="toneSelect">
+                <option value="direto">Direto</option>
+                <option value="persuasivo">Persuasivo</option>
+                <option value="amigavel">Amigável</option>
+              </select>
+            </label>
+            <label>
+              Canal
+              <select id="channelSelect">
+                <option value="whatsapp">WhatsApp</option>
+                <option value="email">E-mail</option>
+                <option value="landing">Landing page</option>
+              </select>
+            </label>
+          </div>
+          <button id="writeCopy">Gerar texto</button>
+          <div id="copyOutput" class="output-box">Clique para gerar uma mensagem.</div>
+        </article>
+
+        <article class="tool-panel code-review">
+          <div class="panel-head">
+            <span class="icon">03</span>
+            <div>
+              <h3>Revisão de código</h3>
+              <p>Procura riscos, bugs comuns e melhorias objetivas.</p>
+            </div>
+          </div>
+          <pre class="code-sample"><code>function total(items) {
+  let sum = 0
+  items.forEach(item => sum += item.price)
+  return sum.toFixed(2)
+}</code></pre>
+          <button id="reviewCode">Analisar trecho</button>
+          <div id="reviewOutput" class="output-box">A análise aparecerá aqui.</div>
+        </article>
+
+        <article class="tool-panel automation">
+          <div class="panel-head">
+            <span class="icon">04</span>
+            <div>
+              <h3>Automação e acompanhamento</h3>
+              <p>Simula lembretes, checagens e rotinas recorrentes.</p>
+            </div>
+          </div>
+          <div class="automation-row">
+            <input id="automationInput" value="Revisar métricas da campanha toda sexta às 9h" />
+            <button id="addAutomation">Adicionar</button>
+          </div>
+          <ul id="automationList" class="check-list">
+            <li><span></span>Verificar erros do site amanhã às 8h</li>
+            <li><span></span>Preparar resumo semanal do projeto</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="dashboard">
+        <div class="dashboard-copy">
+          <p class="eyebrow">Execução visual</p>
+          <h2>Da conversa ao resultado</h2>
+          <p>
+            Conforme você usa os botões, o painel atualiza prioridades, progresso
+            e próximos passos. É uma simulação local de como eu trabalho: entender,
+            transformar em ação, verificar e entregar.
+          </p>
+        </div>
+        <div class="progress-stack">
+          <div class="progress-line">
+            <span>Contexto entendido</span>
+            <div><i style="width: 86%"></i></div>
+          </div>
+          <div class="progress-line">
+            <span>Plano estruturado</span>
+            <div><i id="planBar" style="width: 52%"></i></div>
+          </div>
+          <div class="progress-line">
+            <span>Entrega verificada</span>
+            <div><i id="verifyBar" style="width: 38%"></i></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
