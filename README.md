@@ -1,16 +1,15 @@
-# Codex Studio - Demo Aplicada
+# Portal Cliente Prime - Demo de Servico
 
-Demo estatica e interativa em portugues mostrando exemplos aplicados de uso do Codex em formato de app:
+Demo estatica e interativa em portugues para apresentar um portal de cliente com produtos, fidelidade e atendimento:
 
-- planejamento de execucao;
-- geracao de texto;
-- revisao de codigo;
-- automacoes simuladas;
-- dashboard visual com indicadores;
-- abas com workspace, simulador IA, apresentacao, historico e configuracoes;
+- dashboard de pontos, cashback, metas e saude da carteira;
+- produtos contratados com status, uso, score e beneficios;
+- catalogo de bonificacoes e campanhas ativas;
+- ranking de clientes e niveis de fidelidade;
+- abertura e acompanhamento de chamados;
 - tema claro/escuro;
 - dados salvos no navegador com localStorage;
-- exportacao de plano em TXT, Markdown e JSON.
+- exportacao de relatorio em JSON.
 
 ## Como abrir localmente
 
