@@ -3,25 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Codex Studio - Demo Aplicada</title>
+    <title>Portal Cliente Prime - Demo de Servico</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body data-theme="dark">
     <div class="app-shell">
       <aside class="sidebar">
         <div class="brand">
-          <span class="brand-mark">C</span>
+          <span class="brand-mark">P</span>
           <div>
-            <strong>Codex Studio</strong>
-            <small>demo aplicada</small>
+            <strong>Cliente Prime</strong>
+            <small>portal de serviços</small>
           </div>
         </div>
 
         <nav class="nav-tabs" aria-label="Navegação principal">
-          <button class="nav-tab active" data-view="workspace">Workspace</button>
-          <button class="nav-tab" data-view="ai">Simulador IA</button>
-          <button class="nav-tab" data-view="presentation">Apresentação</button>
-          <button class="nav-tab" data-view="history">Histórico</button>
+          <button class="nav-tab active" data-view="dashboard">Dashboard</button>
+          <button class="nav-tab" data-view="products">Produtos</button>
+          <button class="nav-tab" data-view="bonuses">Bonificações</button>
+          <button class="nav-tab" data-view="ranking">Ranking</button>
+          <button class="nav-tab" data-view="support">Atendimento</button>
           <button class="nav-tab" data-view="settings">Configurações</button>
         </nav>
 
@@ -29,7 +30,7 @@
           <span class="pulse"></span>
           <div>
             <strong id="saveState">Salvo localmente</strong>
-            <small>dados ficam neste navegador</small>
+            <small>demo sem backend real</small>
           </div>
         </div>
       </aside>
@@ -37,188 +38,182 @@
       <main class="main">
         <header class="topbar">
           <div>
-            <p class="eyebrow">Demonstração local, aplicada e rodando</p>
-            <h1 id="pageTitle">Workspace inteligente</h1>
+            <p class="eyebrow">Portal de cliente, produtos e fidelidade</p>
+            <h1 id="pageTitle">Visão geral do cliente</h1>
           </div>
           <div class="top-actions">
             <button id="themeToggle" class="ghost">Tema claro</button>
-            <button id="runAll" class="primary">Executar demo</button>
+            <button id="runScenario" class="primary">Simular mês</button>
           </div>
         </header>
 
-        <section id="workspace" class="view active">
+        <section id="dashboard" class="view active">
           <section class="hero-panel">
             <div class="hero-copy">
-              <h2>Um painel interativo para transformar conversa em entrega</h2>
+              <h2>Central completa para acompanhar carteira, metas e benefícios</h2>
               <p>
-                Planeje, escreva, revise, automatize e exporte resultados. Tudo
-                salva no navegador para você testar sem publicar o site.
+                Uma demonstração de portal onde o cliente acompanha produtos contratados,
+                pontos, bonificações, ranking, chamados e campanhas em andamento.
               </p>
               <div class="hero-actions">
-                <button id="makePlan">Gerar plano aplicado</button>
-                <button id="resetDemo" class="ghost">Reiniciar tela</button>
+                <button id="earnBonus">Registrar compra</button>
+                <button id="redeemBonus" class="ghost">Resgatar bônus</button>
               </div>
             </div>
-            <div class="signal-board" aria-label="Indicadores da demonstração">
+            <div class="signal-board" aria-label="Indicadores do portal">
               <div>
-                <strong id="tasksCount">8</strong>
-                <span>tarefas mapeadas</span>
+                <strong id="pointsCount">12.840</strong>
+                <span>pontos disponíveis</span>
               </div>
               <div>
-                <strong id="confidenceCount">94%</strong>
-                <span>clareza do plano</span>
+                <strong id="tierLabel">Ouro</strong>
+                <span>nível atual</span>
               </div>
               <div>
-                <strong id="timeCount">18 min</strong>
-                <span>economia simulada</span>
+                <strong id="cashbackCount">R$ 486</strong>
+                <span>cashback acumulado</span>
               </div>
             </div>
           </section>
 
           <section class="workspace-grid">
-            <article class="tool-panel planner">
+            <article class="tool-panel">
               <div class="panel-head">
-                <span class="icon">01</span>
+                <span class="icon">M</span>
                 <div>
-                  <h3>Planejamento de execução</h3>
-                  <p>Transforma uma ideia aberta em passos acionáveis.</p>
+                  <h3>Metas do mês</h3>
+                  <p>Acompanhe avanço para liberar novas bonificações.</p>
                 </div>
               </div>
-              <label for="goalInput">Objetivo</label>
-              <textarea id="goalInput" rows="4">Criar uma página de vendas simples para um produto digital, com visual profissional e chamada para ação.</textarea>
-              <ol id="planOutput" class="result-list"></ol>
-              <div class="button-row">
-                <button id="exportTxt">Baixar TXT</button>
-                <button id="exportMd" class="ghost">Baixar MD</button>
-                <button id="exportJson" class="ghost">Baixar JSON</button>
+              <div class="progress-stack">
+                <div class="progress-line">
+                  <span>Compras qualificadas</span>
+                  <div><i id="purchaseGoalBar" style="width: 68%"></i></div>
+                </div>
+                <div class="progress-line">
+                  <span>Indicações confirmadas</span>
+                  <div><i id="referralGoalBar" style="width: 42%"></i></div>
+                </div>
+                <div class="progress-line">
+                  <span>Uso dos produtos</span>
+                  <div><i id="usageGoalBar" style="width: 81%"></i></div>
+                </div>
               </div>
             </article>
 
-            <article class="tool-panel writer">
+            <article class="tool-panel">
               <div class="panel-head">
-                <span class="icon">02</span>
+                <span class="icon">E</span>
                 <div>
-                  <h3>Redação e adaptação</h3>
-                  <p>Gera uma resposta pronta no tom que você escolher.</p>
+                  <h3>Extrato recente</h3>
+                  <p>Movimentações simuladas de pontos, compras e resgates.</p>
                 </div>
               </div>
-              <div class="inline-controls">
-                <label>
-                  Tom
-                  <select id="toneSelect">
-                    <option value="direto">Direto</option>
-                    <option value="persuasivo">Persuasivo</option>
-                    <option value="amigavel">Amigável</option>
-                  </select>
-                </label>
-                <label>
-                  Canal
-                  <select id="channelSelect">
-                    <option value="whatsapp">WhatsApp</option>
-                    <option value="email">E-mail</option>
-                    <option value="landing">Landing page</option>
-                  </select>
-                </label>
-              </div>
-              <button id="writeCopy">Gerar texto</button>
-              <div id="copyOutput" class="output-box">Clique para gerar uma mensagem.</div>
-            </article>
-
-            <article class="tool-panel code-review">
-              <div class="panel-head">
-                <span class="icon">03</span>
-                <div>
-                  <h3>Revisão de código</h3>
-                  <p>Procura riscos, bugs comuns e melhorias objetivas.</p>
-                </div>
-              </div>
-              <pre class="code-sample"><code>function total(items) {
-  let sum = 0
-  items.forEach(item => sum += item.price)
-  return sum.toFixed(2)
-}</code></pre>
-              <button id="reviewCode">Analisar trecho</button>
-              <div id="reviewOutput" class="output-box">A análise aparecerá aqui.</div>
-            </article>
-
-            <article class="tool-panel automation">
-              <div class="panel-head">
-                <span class="icon">04</span>
-                <div>
-                  <h3>Automação e acompanhamento</h3>
-                  <p>Simula lembretes, checagens e rotinas recorrentes.</p>
-                </div>
-              </div>
-              <div class="automation-row">
-                <input id="automationInput" value="Revisar métricas da campanha toda sexta às 9h" />
-                <button id="addAutomation">Adicionar</button>
-              </div>
-              <ul id="automationList" class="check-list"></ul>
+              <ul id="activityList" class="history-list"></ul>
             </article>
           </section>
         </section>
 
-        <section id="ai" class="view">
-          <section class="split-view">
-            <article class="tool-panel generator">
-              <div class="panel-head">
-                <span class="icon">AI</span>
-                <div>
-                  <h3>Simulador de IA completa</h3>
-                  <p>Descreva um projeto e gere plano, checklist, copy, riscos e próximos passos.</p>
-                </div>
-              </div>
-              <label for="projectBrief">Descrição do projeto</label>
-              <textarea id="projectBrief" rows="8">Quero lançar uma consultoria online para pequenos negócios, com uma página simples, agenda de diagnóstico e materiais de apoio.</textarea>
-              <button id="generateFull">Gerar pacote completo</button>
-            </article>
-
-            <article class="tool-panel ai-output">
-              <div class="panel-head compact">
-                <span class="icon">OUT</span>
-                <div>
-                  <h3>Resultado gerado</h3>
-                  <p>Conteúdo estruturado para copiar, ajustar ou exportar.</p>
-                </div>
-              </div>
-              <div id="fullOutput" class="ai-result">
-                <p>Use o botão para gerar uma simulação completa.</p>
-              </div>
-            </article>
-          </section>
-        </section>
-
-        <section id="presentation" class="view">
-          <div class="presentation-stage">
-            <p class="eyebrow">Modo apresentação</p>
-            <h2>Da ideia ao protótipo em minutos</h2>
-            <p>
-              Um fluxo visual para mostrar a clientes ou equipe como o Codex pode
-              planejar, construir, revisar, documentar e publicar.
-            </p>
-            <div class="presentation-metrics">
-              <div><strong>01</strong><span>Entender</span></div>
-              <div><strong>02</strong><span>Executar</span></div>
-              <div><strong>03</strong><span>Verificar</span></div>
-              <div><strong>04</strong><span>Publicar</span></div>
-            </div>
-          </div>
-        </section>
-
-        <section id="history" class="view">
-          <article class="tool-panel">
+        <section id="products" class="view">
+          <section class="tool-panel">
             <div class="panel-head">
-              <span class="icon">H</span>
+              <span class="icon">PR</span>
               <div>
-                <h3>Histórico de ações</h3>
-                <p>Registro salvo localmente das ações executadas nesta demo.</p>
+                <h3>Produtos contratados</h3>
+                <p>Carteira do cliente com status, mensalidade, benefício e ação rápida.</p>
               </div>
             </div>
-            <div class="button-row">
-              <button id="clearHistory" class="ghost">Limpar histórico</button>
-            </div>
-            <ul id="historyList" class="history-list"></ul>
-          </article>
+            <div id="productGrid" class="product-grid"></div>
+          </section>
+        </section>
+
+        <section id="bonuses" class="view">
+          <section class="split-view">
+            <article class="tool-panel">
+              <div class="panel-head">
+                <span class="icon">B</span>
+                <div>
+                  <h3>Bonificações disponíveis</h3>
+                  <p>Catálogo de benefícios para resgate, upgrade ou campanhas.</p>
+                </div>
+              </div>
+              <div id="bonusCatalog" class="bonus-grid"></div>
+            </article>
+
+            <article class="tool-panel">
+              <div class="panel-head">
+                <span class="icon">C</span>
+                <div>
+                  <h3>Campanhas ativas</h3>
+                  <p>Ações promocionais que aumentam pontuação e retenção.</p>
+                </div>
+              </div>
+              <ul id="campaignList" class="check-list"></ul>
+            </article>
+          </section>
+        </section>
+
+        <section id="ranking" class="view">
+          <section class="split-view">
+            <article class="tool-panel">
+              <div class="panel-head">
+                <span class="icon">RK</span>
+                <div>
+                  <h3>Ranking de clientes</h3>
+                  <p>Classificação por engajamento, compras e indicações.</p>
+                </div>
+              </div>
+              <ol id="rankingList" class="ranking-list"></ol>
+            </article>
+
+            <article class="tool-panel">
+              <div class="panel-head">
+                <span class="icon">N</span>
+                <div>
+                  <h3>Níveis de fidelidade</h3>
+                  <p>Regras de evolução para Bronze, Prata, Ouro e Diamante.</p>
+                </div>
+              </div>
+              <div id="tierList" class="tier-list"></div>
+            </article>
+          </section>
+        </section>
+
+        <section id="support" class="view">
+          <section class="split-view">
+            <article class="tool-panel">
+              <div class="panel-head">
+                <span class="icon">AT</span>
+                <div>
+                  <h3>Novo atendimento</h3>
+                  <p>Simule abertura de chamados, solicitação comercial ou suporte.</p>
+                </div>
+              </div>
+              <label for="ticketSubject">Assunto</label>
+              <input id="ticketSubject" value="Quero entender meus bônus do mês" />
+              <label for="ticketType">Tipo</label>
+              <select id="ticketType">
+                <option>Suporte</option>
+                <option>Financeiro</option>
+                <option>Comercial</option>
+                <option>Bonificações</option>
+              </select>
+              <label for="ticketMessage">Mensagem</label>
+              <textarea id="ticketMessage" rows="5">Olá, gostaria de uma análise sobre meus pontos e benefícios disponíveis.</textarea>
+              <button id="openTicket">Abrir chamado</button>
+            </article>
+
+            <article class="tool-panel">
+              <div class="panel-head">
+                <span class="icon">CH</span>
+                <div>
+                  <h3>Chamados e alertas</h3>
+                  <p>Acompanhamento do relacionamento com o cliente.</p>
+                </div>
+              </div>
+              <ul id="ticketList" class="history-list"></ul>
+            </article>
+          </section>
         </section>
 
         <section id="settings" class="view">
@@ -226,8 +221,8 @@
             <div class="panel-head">
               <span class="icon">S</span>
               <div>
-                <h3>Painel de configurações</h3>
-                <p>Ajustes locais da experiência de teste.</p>
+                <h3>Configurações da demo</h3>
+                <p>Ajustes locais para testar o portal como apresentação de serviço.</p>
               </div>
             </div>
             <label class="toggle-row">
@@ -236,30 +231,33 @@
             </label>
             <label class="toggle-row">
               <input id="compactToggle" type="checkbox" />
-              <span>Modo compacto para telas menores</span>
+              <span>Modo compacto para apresentação em notebook</span>
             </label>
-            <button id="clearStorage" class="danger">Apagar dados locais</button>
+            <div class="button-row">
+              <button id="exportReport">Exportar relatório JSON</button>
+              <button id="clearStorage" class="danger">Apagar dados locais</button>
+            </div>
           </article>
         </section>
 
         <section class="dashboard">
           <div class="dashboard-copy">
-            <p class="eyebrow">Execução visual</p>
-            <h2>Progresso da entrega</h2>
-            <p>O painel reage às ações, salva o estado e registra o histórico.</p>
+            <p class="eyebrow">Saúde da carteira</p>
+            <h2>Indicadores do relacionamento</h2>
+            <p>O painel reage às compras, resgates, chamados e evolução no ranking.</p>
           </div>
           <div class="progress-stack">
             <div class="progress-line">
-              <span>Contexto entendido</span>
-              <div><i style="width: 86%"></i></div>
+              <span>Retenção estimada</span>
+              <div><i id="retentionBar" style="width: 88%"></i></div>
             </div>
             <div class="progress-line">
-              <span>Plano estruturado</span>
-              <div><i id="planBar" style="width: 52%"></i></div>
+              <span>Engajamento</span>
+              <div><i id="engagementBar" style="width: 74%"></i></div>
             </div>
             <div class="progress-line">
-              <span>Entrega verificada</span>
-              <div><i id="verifyBar" style="width: 38%"></i></div>
+              <span>Satisfação</span>
+              <div><i id="satisfactionBar" style="width: 91%"></i></div>
             </div>
           </div>
         </section>
