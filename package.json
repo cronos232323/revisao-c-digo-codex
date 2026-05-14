@@ -1,0 +1,18 @@
+{
+  "name": "portal-cliente-prime",
+  "version": "1.0.0",
+  "description": "Portal de cliente com backend local, API REST e persistencia JSON.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "portal",
+    "cliente",
+    "fidelidade",
+    "backend"
+  ],
+  "author": "",
+  "license": "MIT"
+}
