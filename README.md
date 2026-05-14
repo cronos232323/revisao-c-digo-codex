@@ -8,13 +8,45 @@ Demo estatica e interativa em portugues para apresentar um portal de cliente com
 - ranking de clientes e niveis de fidelidade;
 - abertura e acompanhamento de chamados;
 - tema claro/escuro;
-- dados salvos no navegador com localStorage;
+- backend Node.js com API REST;
+- dados persistidos em `data/db.json`;
+- fallback local no navegador quando a API nao estiver rodando;
 - exportacao de relatorio em JSON.
 
-## Como abrir localmente
+## Como rodar com backend
 
-Abra o arquivo `index.html` no navegador.
+```bash
+npm start
+```
+
+Depois acesse:
+
+```text
+http://localhost:3000
+```
+
+Por padrao, no Windows, o backend usa `data/db.json` como base inicial e salva os dados de execucao em:
+
+```text
+%LOCALAPPDATA%\PortalClientePrime\db.json
+```
+
+Em servidor, voce pode definir outra pasta com:
+
+```bash
+DATA_DIR=/caminho/para/dados npm start
+```
+
+## Rotas principais
+
+- `GET /api/state` - retorna o estado completo do portal.
+- `POST /api/actions/purchase` - registra compra e pontuacao.
+- `POST /api/actions/redeem` - resgata bonificacao.
+- `POST /api/actions/month` - simula fechamento mensal.
+- `POST /api/tickets` - abre chamado.
+- `PATCH /api/settings` - atualiza tema e modo compacto.
+- `GET /api/report` - gera relatorio JSON.
 
 ## Como hospedar
 
-Como o projeto usa apenas HTML, CSS e JavaScript, ele pode ser publicado em GitHub Pages, Netlify, Vercel ou qualquer hospedagem estatica.
+Com backend, o projeto deve ser publicado em um ambiente Node.js como Render, Railway, Fly.io, VPS, Azure, AWS ou similar. GitHub Pages nao executa backend Node.js.
