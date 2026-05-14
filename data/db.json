@@ -1,0 +1,72 @@
+{
+  "theme": "dark",
+  "compact": false,
+  "client": {
+    "name": "Cliente Prime Demo",
+    "document": "00.000.000/0001-00",
+    "manager": "Equipe Prime",
+    "status": "Ativo"
+  },
+  "metrics": {
+    "points": 12840,
+    "cashback": 486,
+    "tier": "Ouro",
+    "purchasesGoal": 68,
+    "referralsGoal": 42,
+    "usageGoal": 81,
+    "retention": 88,
+    "engagement": 74,
+    "satisfaction": 91
+  },
+  "activities": [
+    { "at": "09:14", "action": "+1.240 pontos por compra qualificada" },
+    { "at": "Ontem", "action": "Resgate: cupom de R$ 50 aprovado" },
+    { "at": "Seg", "action": "Upgrade de nível: Prata para Ouro" }
+  ],
+  "tickets": [
+    { "id": 1002, "at": "Aberto", "type": "Financeiro", "subject": "Segunda via enviada" },
+    { "id": 1001, "at": "Resolvido", "type": "Bonificações", "subject": "Pontos ajustados" }
+  ],
+  "products": [
+    {
+      "name": "Plano Essencial",
+      "status": "Ativo",
+      "price": "R$ 129/mês",
+      "benefit": "Suporte prioritário e painel de consumo",
+      "usage": 82,
+      "score": 94
+    },
+    {
+      "name": "Clube de Benefícios",
+      "status": "Ativo",
+      "price": "R$ 39/mês",
+      "benefit": "Cashback, cupons e campanhas exclusivas",
+      "usage": 76,
+      "score": 88
+    },
+    {
+      "name": "Consultoria Prime",
+      "status": "Trial",
+      "price": "R$ 0 por 14 dias",
+      "benefit": "Diagnóstico e plano de evolução",
+      "usage": 44,
+      "score": 71
+    }
+  ],
+  "bonuses": [
+    { "name": "Cupom R$ 50", "cost": 2500, "description": "Desconto direto na próxima renovação." },
+    { "name": "Upgrade por 7 dias", "cost": 4200, "description": "Libera recursos premium por uma semana." },
+    { "name": "Consultoria Express", "cost": 7800, "description": "Sessão de 30 minutos com especialista." }
+  ],
+  "campaigns": [
+    "Dobre seus pontos em compras acima de R$ 500",
+    "Indique 3 clientes e desbloqueie nível Diamante",
+    "Use todos os produtos ativos e ganhe 1.000 pontos extras"
+  ],
+  "ranking": [
+    { "name": "Ana Martins", "tier": "Diamante", "points": 28420 },
+    { "name": "Cliente Prime Demo", "tier": "Ouro", "points": 12840 },
+    { "name": "Rafael Lima", "tier": "Ouro", "points": 11980 },
+    { "name": "Norte Digital", "tier": "Prata", "points": 8600 }
+  ]
+}
